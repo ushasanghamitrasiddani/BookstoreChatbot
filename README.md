@@ -16,14 +16,14 @@ Usha
 
 Initial Goals
 
-1.Develop an interactive chatbot using Python.
+1. Develop an interactive chatbot using Python.
 
-2.Understand and process user queries.
+2. Understand and process user queries.
 
-3.Generate relevant and meaningful responses.
+3. Generate relevant and meaningful responses.
 
-4.Integrate AI capabilities to improve chatbot interactions.
+4. Integrate AI capabilities to improve chatbot interactions.
 
-5.Create a simple and user-friendly interface.
+5. Create a simple and user-friendly interface.
 
-6.Test the chatbot and improve its performance.
+6. Test the chatbot and improve its performance.
