@@ -3,22 +3,23 @@
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
+#"Update CI triggers for development branch."
 trigger:
-- main
+  branches:
+    include:
+    - develop
+
+
 
 pool:
   vmImage: ubuntu-latest
 
 strategy:
   matrix:
-    Python38:
-      python.version: '3.8'
+    
     Python39:
       python.version: '3.9'
-    Python310:
-      python.version: '3.10'
-    Python311:
-      python.version: '3.11'
+
 
 steps:
 - task: UsePythonVersion@0
@@ -29,9 +30,8 @@ steps:
 - script: |
     python -m pip install --upgrade pip
     pip install -r requirements.txt
-  displayName: 'Install dependencies'
-
-- script: |
     pip install pytest pytest-azurepipelines
     pytest
-  displayName: 'pytest'
+  displayName: 'Run pytest tests'
+
+
